@@ -1,23 +1,24 @@
 spaceship Griff = new spaceship();
 star[] nightSky = new star[200];
-void setup(){
-  
+Asteroid bob = new Asteroid();
+public void setup(){
   size(600,600);
-   for(int i = 0; i <nightSky.length;i++){
+  for(int i = 0; i <nightSky.length;i++){
      nightSky[i]=new star();
    }
   background(0);
 }
 
-void draw(){
+public void draw(){
   background(0);
    for(int i = 0; i <nightSky.length;i++){
    nightSky[i].show();
    }
   Griff.show();
   Griff.move();
- 
- 
+  bob.move();
+  bob.show();
+  
 }
 
 public void keyPressed(){
